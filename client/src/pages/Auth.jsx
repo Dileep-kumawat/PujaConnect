@@ -60,20 +60,20 @@ const Auth = () => {
   return (
     <div className="relative min-h-[calc(100vh-80px)] flex items-center justify-center py-12 px-6 overflow-hidden">
       {/* Background Spiritual Ambient Glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-saffron-600/10 blur-[100px] pointer-events-none -z-10 animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-burgundy-900/15 blur-[100px] pointer-events-none -z-10 animate-pulse-slow" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-saffron-500/5 blur-[100px] pointer-events-none -z-10 animate-pulse-slow" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-burgundy-800/4 blur-[100px] pointer-events-none -z-10 animate-pulse-slow" />
 
       {/* Main Glass Card */}
-      <div className="glass-panel w-full max-w-md rounded-3xl overflow-hidden border border-white/10 shadow-2xl flex flex-col p-8 auth-card-transition">
+      <div className="glass-panel w-full max-w-md rounded-3xl overflow-hidden border border-slate-200/60 shadow-2xl flex flex-col p-8 auth-card-transition bg-white">
         {/* Branding header */}
         <div className="flex flex-col items-center text-center mb-6">
-          <div className="w-12 h-12 rounded-full bg-saffron-600/10 flex items-center justify-center border border-saffron-500/30 mb-3">
-            <Flame className="w-7 h-7 text-saffron-500 animate-pulse-slow" />
+          <div className="w-12 h-12 rounded-full bg-saffron-50 flex items-center justify-center border border-saffron-200 mb-3">
+            <Flame className="w-7 h-7 text-saffron-600 animate-pulse-slow" />
           </div>
-          <h2 className="font-serif text-2xl font-bold text-white tracking-wide">
+          <h2 className="font-serif text-2xl font-bold text-slate-800 tracking-wide">
             {isLogin ? 'Welcome Back' : 'Join PujaConnect'}
           </h2>
-          <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+          <p className="text-xs text-slate-500 mt-1 leading-relaxed">
             {isLogin 
               ? 'Sign in to schedule your ceremonies and manage rituals' 
               : 'Connect with verified priests for home or temple devotions'}
@@ -81,23 +81,23 @@ const Auth = () => {
         </div>
 
         {/* Tab Selector (Login / Register) */}
-        <div className="grid grid-cols-2 bg-white/5 border border-white/10 rounded-xl p-1 mb-6">
+        <div className="grid grid-cols-2 bg-slate-100 border border-slate-200/60 rounded-xl p-1 mb-6">
           <button
             onClick={() => { setIsLogin(true); setError(''); }}
-            className={`py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
+            className={`py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
               isLogin 
-                ? 'bg-saffron-600 text-white shadow-md gold-glow' 
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-saffron-600 text-white shadow shadow-saffron-100' 
+                : 'text-slate-500 hover:text-slate-800 bg-transparent border-none'
             }`}
           >
             Login
           </button>
           <button
             onClick={() => { setIsLogin(false); setError(''); }}
-            className={`py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
+            className={`py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
               !isLogin 
-                ? 'bg-saffron-600 text-white shadow-md gold-glow' 
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-saffron-600 text-white shadow shadow-saffron-100' 
+                : 'text-slate-500 hover:text-slate-800 bg-transparent border-none'
             }`}
           >
             Sign Up
@@ -106,7 +106,7 @@ const Auth = () => {
 
         {/* Error Message */}
         {error && (
-          <div className="bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold p-3 rounded-lg mb-4 text-center">
+          <div className="bg-red-50 border border-red-200 text-red-650 text-xs font-semibold p-3 rounded-lg mb-4 text-center">
             {error}
           </div>
         )}
@@ -118,15 +118,15 @@ const Auth = () => {
             <>
               {/* Role selector */}
               <div className="space-y-1.5 mb-2">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">I want to register as a:</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">I want to register as a:</label>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     type="button"
                     onClick={() => setRole('customer')}
-                    className={`py-2 rounded-lg border text-xs font-bold transition-all ${
+                    className={`py-2 rounded-lg border text-xs font-bold transition-all cursor-pointer ${
                       role === 'customer'
-                        ? 'border-gold-500/50 bg-gold-500/10 text-gold-400'
-                        : 'border-white/10 bg-white/5 text-slate-400 hover:text-white'
+                        ? 'border-amber-400 bg-amber-50 text-amber-700 font-extrabold'
+                        : 'border-slate-200 bg-slate-50 text-slate-500 hover:text-slate-800'
                     }`}
                   >
                     Customer
@@ -134,10 +134,10 @@ const Auth = () => {
                   <button
                     type="button"
                     onClick={() => setRole('pandit')}
-                    className={`py-2 rounded-lg border text-xs font-bold transition-all ${
+                    className={`py-2 rounded-lg border text-xs font-bold transition-all cursor-pointer ${
                       role === 'pandit'
-                        ? 'border-saffron-500/50 bg-saffron-500/10 text-saffron-400'
-                        : 'border-white/10 bg-white/5 text-slate-400 hover:text-white'
+                        ? 'border-saffron-400 bg-saffron-50 text-saffron-700 font-extrabold'
+                        : 'border-slate-200 bg-slate-50 text-slate-500 hover:text-slate-800'
                     }`}
                   >
                     Pandit
@@ -147,15 +147,15 @@ const Auth = () => {
 
               {/* Name */}
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Full Name</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Full Name</label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Enter your full name"
-                    className="w-full rounded-xl bg-white/5 border border-white/10 pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-saffron-500 transition-colors"
+                    className="w-full rounded-xl bg-white border border-slate-200 pl-10 pr-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-saffron-500 transition-colors"
                     required={!isLogin}
                   />
                 </div>
@@ -163,15 +163,15 @@ const Auth = () => {
 
               {/* Phone */}
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Phone Number</label>
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Phone Number</label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                   <input
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="Enter 10-digit mobile number"
-                    className="w-full rounded-xl bg-white/5 border border-white/10 pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-saffron-500 transition-colors"
+                    className="w-full rounded-xl bg-white border border-slate-200 pl-10 pr-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-saffron-500 transition-colors"
                     required={!isLogin}
                   />
                 </div>
@@ -181,15 +181,15 @@ const Auth = () => {
 
           {/* Email */}
           <div className="space-y-1">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Email Address</label>
+            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Email Address</label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full rounded-xl bg-white/5 border border-white/10 pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-saffron-500 transition-colors"
+                className="w-full rounded-xl bg-white border border-slate-200 pl-10 pr-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-saffron-500 transition-colors"
                 required
               />
             </div>
@@ -197,15 +197,15 @@ const Auth = () => {
 
           {/* Password */}
           <div className="space-y-1">
-            <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Password</label>
+            <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Password</label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full rounded-xl bg-white/5 border border-white/10 pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-saffron-500 transition-colors"
+                className="w-full rounded-xl bg-white border border-slate-200 pl-10 pr-4 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-saffron-500 transition-colors"
                 required
               />
             </div>
@@ -215,7 +215,7 @@ const Auth = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-2 py-2.5 rounded-xl bg-saffron-600 hover:bg-saffron-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-bold text-sm transition-all gold-glow flex items-center justify-center gap-1.5 cursor-pointer"
+            className="w-full mt-2 py-2.5 rounded-xl bg-saffron-600 hover:bg-saffron-500 disabled:bg-slate-100 disabled:text-slate-400 text-white font-bold text-sm transition-all gold-glow flex items-center justify-center gap-1.5 cursor-pointer shadow shadow-saffron-100"
           >
             {loading ? (
               <span>Processing...</span>
@@ -230,11 +230,11 @@ const Auth = () => {
 
         {/* Toggle Footer text */}
         <div className="mt-6 text-center">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-500">
             {isLogin ? "Don't have an account? " : "Already have an account? "}
             <button
               onClick={() => { setIsLogin(!isLogin); setError(''); }}
-              className="text-saffron-400 hover:text-saffron-300 font-bold underline focus:outline-none bg-transparent border-none cursor-pointer"
+              className="text-saffron-600 hover:text-saffron-700 font-bold underline focus:outline-none bg-transparent border-none cursor-pointer"
             >
               {isLogin ? 'Sign up here' : 'Log in here'}
             </button>

@@ -54,18 +54,18 @@ function AppContent() {
       </div>
 
       {/* Premium Elegant Footer */}
-      <footer className="w-full bg-spiritual-slate py-8 border-t border-white/5 text-center px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <footer className="w-full bg-spiritual-slate py-8 border-t border-slate-200 text-center px-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
           <div>
-            <span className="font-serif font-bold text-white tracking-wide">
-              Puja<span className="text-gold-500">Connect</span>
+            <span className="font-serif font-bold text-slate-800 tracking-wide animate-pulse-slow">
+              Puja<span className="text-gold-600">Connect</span>
             </span>
             <span className="ml-1">© 2026. Conducting sacred Vedic services with absolute integrity.</span>
           </div>
-          <div className="flex items-center gap-6">
-            <Link to="/" className="hover:text-saffron-500 transition-colors">Home</Link>
-            <Link to="/search" className="hover:text-saffron-500 transition-colors">Browse Priests</Link>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-saffron-500 transition-colors">GitHub</a>
+          <div className="flex items-center gap-6 font-medium text-slate-600">
+            <Link to="/" className="hover:text-saffron-600 transition-colors">Home</Link>
+            <Link to="/search" className="hover:text-saffron-600 transition-colors">Browse Priests</Link>
+            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-saffron-600 transition-colors">GitHub</a>
           </div>
         </div>
       </footer>
