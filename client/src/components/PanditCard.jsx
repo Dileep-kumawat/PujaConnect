@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, Globe, MapPin, Star, ShieldCheck } from 'lucide-react';
 
 const PanditCard = ({ pandit }) => {
-  const { user, bio, languages, location, experience, rituals, rating, isVerified, _id } = pandit;
+  const { user, bio, languages, location, experience, rituals, rating, isVerified, _id, profilePic } = pandit;
+  const [imageError, setImageError] = useState(false);
 
   // Find lowest price
   const basePrice = rituals && rituals.length > 0
@@ -16,9 +17,18 @@ const PanditCard = ({ pandit }) => {
         {/* Header Profile Section */}
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="flex items-center gap-3">
-            <div className="w-14 h-14 rounded-full bg-saffron-50 border border-saffron-200 flex items-center justify-center font-serif text-2xl font-bold text-saffron-600">
-              {user && user.name ? user.name.split(' ').slice(-1)[0][0] : 'P'}
-            </div>
+            {!imageError && profilePic ? (
+              <img
+                src={profilePic}
+                alt={user ? user.name : 'Pandit'}
+                className="w-14 h-14 rounded-full object-cover border border-saffron-200 shrink-0 shadow-sm"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-14 h-14 rounded-full bg-saffron-50 border border-saffron-200 flex items-center justify-center font-serif text-2xl font-bold text-saffron-600 shrink-0">
+                {user && user.name ? user.name.split(' ').slice(-1)[0][0] : 'P'}
+              </div>
+            )}
             <div>
               <div className="flex items-center gap-1.5">
                 <h3 className="font-serif text-lg font-semibold text-slate-800 tracking-wide">

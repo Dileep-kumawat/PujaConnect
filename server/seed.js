@@ -22,7 +22,7 @@ const ritualsData = [
     ],
     basePriceRange: { min: 2000, max: 4000 },
     locationType: 'Both',
-    image: 'https://images.unsplash.com/photo-1609137144813-2d216d299496?w=600&auto=format&fit=crop&q=60'
+    image: 'https://i.pinimg.com/736x/52/bc/2f/52bc2f8b52f4d4102c0d973262cd47a4.jpg'
   },
   {
     name: 'Griha Pravesh Puja',
@@ -40,7 +40,7 @@ const ritualsData = [
     ],
     basePriceRange: { min: 4500, max: 8000 },
     locationType: 'Home',
-    image: 'https://images.unsplash.com/photo-1561571994-3c61c554181a?w=600&auto=format&fit=crop&q=60'
+    image: 'https://i.pinimg.com/1200x/6b/ac/76/6bac7636d07d859c0b1dceddd7ff488d.jpg'
   },
   {
     name: 'Maha Mrityunjaya Havan',
@@ -58,7 +58,7 @@ const ritualsData = [
     ],
     basePriceRange: { min: 6000, max: 12000 },
     locationType: 'Both',
-    image: 'https://images.unsplash.com/photo-1608925553951-871d3c01579b?w=600&auto=format&fit=crop&q=60'
+    image: 'https://i.pinimg.com/736x/54/6c/4c/546c4c07f861c2c24ea22a81a5d6b6b0.jpg'
   },
   {
     name: 'Naamkaran Puja',
@@ -74,7 +74,7 @@ const ritualsData = [
     ],
     basePriceRange: { min: 2500, max: 4500 },
     locationType: 'Both',
-    image: 'https://images.unsplash.com/photo-1621274790572-7c325d6bc67f?w=600&auto=format&fit=crop&q=60'
+    image: 'https://i.pinimg.com/736x/ea/71/9d/ea719dcd59098dabf0a6a2921ac1981f.jpg'
   },
   {
     name: 'Mundan Sanskar',
@@ -90,7 +90,7 @@ const ritualsData = [
     ],
     basePriceRange: { min: 2000, max: 3500 },
     locationType: 'Both',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=60'
+    image: 'https://i.pinimg.com/1200x/5b/58/aa/5b58aa15afc8cd6b4c442a6de31c6d43.jpg'
   },
   {
     name: 'Ganesha Puja',
@@ -106,7 +106,7 @@ const ritualsData = [
     ],
     basePriceRange: { min: 1500, max: 3000 },
     locationType: 'Both',
-    image: 'https://images.unsplash.com/photo-1567591974573-ef3c6beff97f?w=600&auto=format&fit=crop&q=60'
+    image: 'https://i.pinimg.com/736x/c7/fa/91/c7fa9158e2c84b62cdcb513cb36113c2.jpg'
   }
 ];
 
@@ -217,7 +217,7 @@ const seedData = async () => {
       ],
       isVerified: 'verified',
       rating: 4.9,
-      profilePic: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80' // Placeholder/Avatar
+      profilePic: 'https://i.pinimg.com/736x/d4/f3/ea/d4f3ea44b94b1c8acab77f11ea4b9548.jpg' // Placeholder/Avatar
     });
 
     // Pandit 2: Dwarika Shastri - Verified, Varanasi
@@ -244,7 +244,7 @@ const seedData = async () => {
       ],
       isVerified: 'verified',
       rating: 4.8,
-      profilePic: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
+      profilePic: 'https://i.pinimg.com/736x/50/7a/52/507a52b10240329f967c50d922b8c412.jpg'
     });
 
     // Pandit 3: Vivek Pandey - Pending, Delhi
@@ -264,7 +264,7 @@ const seedData = async () => {
       ],
       isVerified: 'pending',
       rating: 4.5,
-      profilePic: 'https://images.unsplash.com/photo-1628157582853-a796fa650a6a?w=150&auto=format&fit=crop&q=80'
+      profilePic: 'https://i.pinimg.com/736x/dc/bf/a2/dcbfa20645af65b817ffe14300c0e2cf.jpg'
     });
 
     console.log('Pandit profiles seeded.');

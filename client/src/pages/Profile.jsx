@@ -14,6 +14,7 @@ const Profile = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const fetchPanditDetails = async () => {
@@ -116,9 +117,18 @@ const Profile = () => {
 
       {/* Main Profile Header Card */}
       <div className="glass-panel rounded-3xl border border-slate-200/60 overflow-hidden flex flex-col md:flex-row items-center md:items-start p-8 gap-8 bg-white">
-        <div className="w-32 h-32 rounded-full bg-saffron-50 border-2 border-saffron-200 flex items-center justify-center font-serif text-5xl font-bold text-saffron-600 shrink-0 shadow-lg">
-          {pandit.user ? pandit.user.name.split(' ').slice(-1)[0][0] : 'P'}
-        </div>
+            {!imageError && pandit.profilePic ? (
+              <img
+                src={pandit.profilePic}
+                alt={pandit.user ? pandit.user.name : 'Pandit'}
+                className="w-32 h-32 rounded-full object-cover border-2 border-saffron-200 shrink-0 shadow-lg"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-32 h-32 rounded-full bg-saffron-50 border-2 border-saffron-200 flex items-center justify-center font-serif text-5xl font-bold text-saffron-600 shrink-0 shadow-lg">
+                {pandit.user ? pandit.user.name.split(' ').slice(-1)[0][0] : 'P'}
+              </div>
+            )}
 
         <div className="flex-1 space-y-4 text-center md:text-left">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
