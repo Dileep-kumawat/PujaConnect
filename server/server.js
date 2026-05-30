@@ -48,7 +48,7 @@ app.use(/^\/api\/.*$/, (req, res) => {
 
 // Catch-all route to serve the React app for non-API requests
 app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // Generic Error Handler Middleware
