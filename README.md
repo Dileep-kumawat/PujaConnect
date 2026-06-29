@@ -10,8 +10,11 @@
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS%204.x-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-pujaconnect.onrender.com-FF6B35?style=for-the-badge)](https://pujaconnect.onrender.com/)
 
 **A service-based digital platform to discover, compare, and book verified Pandits for religious ceremonies.**
+
+🌐 **[Live Demo → https://pujaconnect.onrender.com/](https://pujaconnect.onrender.com/)**
 
 [Features](#-features) • [Tech Stack](#-tech-stack) • [Getting Started](#-getting-started) • [API Routes](#-api-routes) • [Folder Structure](#-folder-structure) • [Author](#-author)
 
